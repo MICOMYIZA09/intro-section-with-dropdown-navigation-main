@@ -1,0 +1,271 @@
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+  }
+  
+  body {
+    font-family: 'Epilogue', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    position: relative; 
+    
+  }
+  
+  .logo img {
+    height: 24px;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .auth {
+    display: none;
+    align-items: center;
+  }
+  
+  .auth a {
+    text-decoration: none;
+    color: var(--medium-gray);
+    margin-right: 20px;
+  }
+  
+  .auth button {
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+    border: 1px solid var(--almost-black);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .auth button:hover {
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+  }
+  
+  .humberger-icon {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .humberger-icon img{
+      height: 24px;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: var(--almost-white);
+    text-align: center;
+    margin-top: 0; 
+  }
+  
+  .hero-content {
+    margin-bottom: 40px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.25em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: var(--almost-black);
+  }
+  
+  .hero-content p {
+    font-size: 1em;
+    color: var(--medium-gray);
+    margin-bottom: 30px;
+  }
+  
+  .learn-more {
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more:hover {
+    background-color: hsl(0, 0%, 17%);
+  }
+  
+  .partners {
+    margin-top: 30px;
+    color: var(--medium-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50px;
+  }
+  
+  .partner {
+    margin: 60px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .partner img{
+    flex-direction: column;
+      height: 16px;
+  }
+  
+  .partner:hover {
+    opacity: 1;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .desktop-image {
+    display: none;
+  }
+  
+  .mobile-image {
+    width: 100%;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: transform 0.3s ease-in-out;
+    padding-top: 80px; 
+    text-align: center;
+  }
+  
+  
+  
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mobile-nav ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .mobile-nav ul li a {
+    text-decoration: none;
+    color: var(--almost-black);
+    font-size: 1.2em;
+  }
+  
+  .mobile-nav ul li button {
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+    border: 1px solid var(--almost-black);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .mobile-nav ul li button:hover{
+      background-color: var(--almost-black);
+      color: var(--almost-white);
+  }
+  
+  @media (min-width: 768px) {
+    header {
+      padding: 20px 40px;
+    }
+  
+    nav {
+      display: block;
+    }
+  
+    .auth {
+      display: flex;
+    }
+  
+    .humberger-icon {
+      display: none;
+    }
+  
+    .hero {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      margin-top: 0;
+    }
+  
+    .hero-content {
+      flex: 1;
+      padding-right: 40px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+  
+    .hero-image {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  
+    .desktop-image {
+      display: block;
+    }
+  
+    .mobile-image {
+      display: none;
+    }
+  
+    .partners {
+      justify-content: flex-start;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+  }
+  
+  nav ul li {
+      margin-left: 20px;
+  }
+  
+  nav ul li a {
+      text-decoration: none;
+      color: var(--medium-gray);
+  }
+  }
+  
